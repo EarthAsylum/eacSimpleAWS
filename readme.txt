@@ -12,6 +12,7 @@ License:            GPLv3 or later
 License URI:        https://www.gnu.org/licenses/gpl.html
 Tags:               aws, amazon web services, AWS PHP SDK, {eac}Doojigger
 WordPress URI:		https://wordpress.org/plugins/eacsimpleaws
+GitHub URI:			https://github.com/KBurkholder/eacSimplaAWS
 
 {eac}SimpleAWS includes and enables use of the Amazon Web Services (AWS) PHP Software Development Kit (SDK).
 
