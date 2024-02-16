@@ -12,7 +12,7 @@ License:            GPLv3 or later
 License URI:        https://www.gnu.org/licenses/gpl.html
 Tags:               aws, amazon web services, AWS PHP SDK, {eac}Doojigger
 WordPress URI:		https://wordpress.org/plugins/eacsimpleaws
-GitHub URI:			https://github.com/KBurkholder/eacSimplaAWS
+GitHub URI:			https://github.com/EarthAsylum/eacSimplaAWS
 
 {eac}SimpleAWS includes and enables use of the Amazon Web Services (AWS) PHP Software Development Kit (SDK).
 
@@ -136,10 +136,10 @@ Once installed and activated options for this extension will show in the 'Genera
 == Screenshots ==
 
 1. Simple AWS
-![{eac}SimpleAWS Extension](https://d2xk802d4616wu.cloudfront.net/eacsimpleaws/assets/screenshot-1.png)
+![{eac}SimpleAWS Extension](https://ps.w.org/eacsimpleaws/assets/screenshot-1.png)
 
 2. Simple AWS Help
-![{eac}SimpleAWS Help](https://d2xk802d4616wu.cloudfront.net/eacsimpleaws/assets/screenshot-2.png)
+![{eac}SimpleAWS Help](https://ps.w.org/eacsimpleaws/assets/screenshot-2.png)
 
 
 == Other Notes ==
