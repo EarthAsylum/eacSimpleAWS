@@ -1,9 +1,9 @@
-# {eac}Doojigger Simple AWS Extension for WordPress  
+## {eac}Doojigger Simple AWS Extension for WordPress  
 [![EarthAsylum Consulting](https://img.shields.io/badge/EarthAsylum-Consulting-0?&labelColor=6e9882&color=707070)](https://earthasylum.com/)
 [![WordPress](https://img.shields.io/badge/WordPress-Plugins-grey?logo=wordpress&labelColor=blue)](https://wordpress.org/plugins/search/EarthAsylum/)
-[![eacDoojigger](https://img.shields.io/badge/Requires-{eac}Doojigger-da821d)](https://eacDoojigger.earthasylum.com/)
+[![eacDoojigger](https://img.shields.io/badge/Requires-%7Beac%7DDoojigger-da821d)](https://eacDoojigger.earthasylum.com/)
 
-<details><summary>Plugin Header</summary><samp>
+<details><summary>Plugin Header</summary>
 
 Plugin URI:         https://eacdoojigger.earthasylum.com/eacsimpleaws/  
 Author:             [EarthAsylum Consulting](https://www.earthasylum.com)  
@@ -17,21 +17,22 @@ Contributors:       [kevinburkholder](https://profiles.wordpress.org/kevinburkho
 License:            GPLv3 or later  
 License URI:        https://www.gnu.org/licenses/gpl.html  
 Tags:               aws, amazon web services, AWS PHP SDK, {eac}Doojigger  
-WordPress URI:		https://wordpress.org/plugins/eacsimpleaws  
-GitHub URI:			https://github.com/EarthAsylum/eacSimplaAWS  
-</samp></details>
+WordPress URI:      https://wordpress.org/plugins/eacsimpleaws  
+GitHub URI:         https://github.com/EarthAsylum/eacSimplaAWS  
 
-**_{eac}SimpleAWS includes and enables use of the Amazon Web Services (AWS) PHP Software Development Kit (SDK)._**
+</details>
 
-## Description
+> {eac}SimpleAWS includes and enables use of the Amazon Web Services (AWS) PHP Software Development Kit (SDK).
+
+### Description
 
 Once enabled, AWS services are easily accessable from other plugins, extensions and custom functions.
 
 From the settings page, you can enter your AWS Region and your IAM account credentials to access AWS programmatically.
 
 Please review:
-+	[Policies and permissions in IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html)  
-+	[Managing access keys for IAM users](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)
++   [Policies and permissions in IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html)  
++   [Managing access keys for IAM users](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)
 
 #### Available Methods:
 
@@ -75,45 +76,45 @@ Please review:
 
 #### Examples:
 
-	$cloudFront = new Aws\CloudFront\CloudFrontClient([
-		'version'       => 'latest',
-		'region'        => apply_filters('SimpleAWS_region',''),
-		'credentials'   => [
-			'key'       => apply_filters('SimpleAWS_access_key',''),
-			'secret'    => apply_filters('SimpleAWS_access_secret','')
-		]
-	]);
+    $cloudFront = new Aws\CloudFront\CloudFrontClient([
+        'version'       => 'latest',
+        'region'        => apply_filters('SimpleAWS_region',''),
+        'credentials'   => [
+            'key'       => apply_filters('SimpleAWS_access_key',''),
+            'secret'    => apply_filters('SimpleAWS_access_secret','')
+        ]
+    ]);
 
-	if ($aws = $this->getExtension('Simple_AWS')) {
-		$cloudFront = new Aws\CloudFront\CloudFrontClient([
-			'version'       => 'latest',
-			'region'        => $aws->getAwsRegion(),
-			'credentials'   => $aws->getAwsCredentials(),
-		]);
-	}
+    if ($aws = $this->getExtension('Simple_AWS')) {
+        $cloudFront = new Aws\CloudFront\CloudFrontClient([
+            'version'       => 'latest',
+            'region'        => $aws->getAwsRegion(),
+            'credentials'   => $aws->getAwsCredentials(),
+        ]);
+    }
 
-	if ($aws = eacDoojigger()->getExtension('Simple_AWS')) {
-		$cloudFront = new Aws\CloudFront\CloudFrontClient([
-			'version'       => $aws->getAwsVersion(),
-			'region'        => $aws->getAwsRegion(),
-			'credentials'   => $aws->getAwsCredentials(),
-		]);
-	}
+    if ($aws = eacDoojigger()->getExtension('Simple_AWS')) {
+        $cloudFront = new Aws\CloudFront\CloudFrontClient([
+            'version'       => $aws->getAwsVersion(),
+            'region'        => $aws->getAwsRegion(),
+            'credentials'   => $aws->getAwsCredentials(),
+        ]);
+    }
 
-	if ($aws = $this->getExtension('Simple_AWS')) {
-		$cloudFront = new Aws\CloudFront\CloudFrontClient(
-			$aws->getAwsClientParams()
-		);
-	}
+    if ($aws = $this->getExtension('Simple_AWS')) {
+        $cloudFront = new Aws\CloudFront\CloudFrontClient(
+            $aws->getAwsClientParams()
+        );
+    }
 
-	if ($aws = eacDoojigger()->getExtension('Simple_AWS')) {
-		$cloudFront = new Aws\CloudFront\CloudFrontClient(
-			$aws->getAwsClientParams()
-		);
-	}
+    if ($aws = eacDoojigger()->getExtension('Simple_AWS')) {
+        $cloudFront = new Aws\CloudFront\CloudFrontClient(
+            $aws->getAwsClientParams()
+        );
+    }
 
 
-## Installation
+### Installation
 
 **{eac}Doojigger Simple AWS Extension** is an extension plugin to and requires installation and registration of [{eac}Doojigger](https://eacDoojigger.earthasylum.com/).
 
@@ -140,7 +141,7 @@ See [Managing Plugins -> Manual Plugin Installation](https://wordpress.org/suppo
 Once installed and activated options for this extension will show in the 'General' tab of {eac}Doojigger settings.
 
 
-## Screenshots
+### Screenshots
 
 1. Simple AWS
 ![{eac}SimpleAWS Extension](https://ps.w.org/eacsimpleaws/assets/screenshot-1.png)
@@ -149,7 +150,7 @@ Once installed and activated options for this extension will show in the 'Genera
 ![{eac}SimpleAWS Help](https://ps.w.org/eacsimpleaws/assets/screenshot-2.png)
 
 
-## Other Notes
+### Other Notes
 
 #### Additional Information
 

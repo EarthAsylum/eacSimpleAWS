@@ -11,8 +11,8 @@ Contributors:       kevinburkholder
 License:            GPLv3 or later
 License URI:        https://www.gnu.org/licenses/gpl.html
 Tags:               aws, amazon web services, AWS PHP SDK, {eac}Doojigger
-WordPress URI:		https://wordpress.org/plugins/eacsimpleaws
-GitHub URI:			https://github.com/EarthAsylum/eacSimplaAWS
+WordPress URI:      https://wordpress.org/plugins/eacsimpleaws
+GitHub URI:         https://github.com/EarthAsylum/eacSimplaAWS
 
 {eac}SimpleAWS includes and enables use of the Amazon Web Services (AWS) PHP Software Development Kit (SDK).
 
@@ -23,8 +23,8 @@ Once enabled, AWS services are easily accessable from other plugins, extensions 
 From the settings page, you can enter your AWS Region and your IAM account credentials to access AWS programmatically.
 
 Please review:
-+	[Policies and permissions in IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html)
-+	[Managing access keys for IAM users](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)
++   [Policies and permissions in IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html)
++   [Managing access keys for IAM users](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)
 
 = Available Methods: =
 
@@ -68,42 +68,42 @@ Please review:
 
 = Examples: =
 
-	$cloudFront = new Aws\CloudFront\CloudFrontClient([
-		'version'       => 'latest',
-		'region'        => apply_filters('SimpleAWS_region',''),
-		'credentials'   => [
-			'key'       => apply_filters('SimpleAWS_access_key',''),
-			'secret'    => apply_filters('SimpleAWS_access_secret','')
-		]
-	]);
+    $cloudFront = new Aws\CloudFront\CloudFrontClient([
+        'version'       => 'latest',
+        'region'        => apply_filters('SimpleAWS_region',''),
+        'credentials'   => [
+            'key'       => apply_filters('SimpleAWS_access_key',''),
+            'secret'    => apply_filters('SimpleAWS_access_secret','')
+        ]
+    ]);
 
-	if ($aws = $this->getExtension('Simple_AWS')) {
-		$cloudFront = new Aws\CloudFront\CloudFrontClient([
-			'version'       => 'latest',
-			'region'        => $aws->getAwsRegion(),
-			'credentials'   => $aws->getAwsCredentials(),
-		]);
-	}
+    if ($aws = $this->getExtension('Simple_AWS')) {
+        $cloudFront = new Aws\CloudFront\CloudFrontClient([
+            'version'       => 'latest',
+            'region'        => $aws->getAwsRegion(),
+            'credentials'   => $aws->getAwsCredentials(),
+        ]);
+    }
 
-	if ($aws = eacDoojigger()->getExtension('Simple_AWS')) {
-		$cloudFront = new Aws\CloudFront\CloudFrontClient([
-			'version'       => $aws->getAwsVersion(),
-			'region'        => $aws->getAwsRegion(),
-			'credentials'   => $aws->getAwsCredentials(),
-		]);
-	}
+    if ($aws = eacDoojigger()->getExtension('Simple_AWS')) {
+        $cloudFront = new Aws\CloudFront\CloudFrontClient([
+            'version'       => $aws->getAwsVersion(),
+            'region'        => $aws->getAwsRegion(),
+            'credentials'   => $aws->getAwsCredentials(),
+        ]);
+    }
 
-	if ($aws = $this->getExtension('Simple_AWS')) {
-		$cloudFront = new Aws\CloudFront\CloudFrontClient(
-			$aws->getAwsClientParams()
-		);
-	}
+    if ($aws = $this->getExtension('Simple_AWS')) {
+        $cloudFront = new Aws\CloudFront\CloudFrontClient(
+            $aws->getAwsClientParams()
+        );
+    }
 
-	if ($aws = eacDoojigger()->getExtension('Simple_AWS')) {
-		$cloudFront = new Aws\CloudFront\CloudFrontClient(
-			$aws->getAwsClientParams()
-		);
-	}
+    if ($aws = eacDoojigger()->getExtension('Simple_AWS')) {
+        $cloudFront = new Aws\CloudFront\CloudFrontClient(
+            $aws->getAwsClientParams()
+        );
+    }
 
 
 == Installation ==
@@ -165,7 +165,7 @@ You should receive a copy of the GNU General Public License along with this prog
 = Version 1.0.1 – September 9, 2023 =
 
 +   Updated include file to prevent direct access.
-+	Updated AWS PHP SDK to version 3.281.3
++   Updated AWS PHP SDK to version 3.281.3
 
 = Version 1.0.0 – June 3, 2023 =
 
