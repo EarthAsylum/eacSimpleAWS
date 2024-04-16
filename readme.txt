@@ -1,10 +1,10 @@
 === {eac}Doojigger Simple AWS Extension for WordPress ===
 Plugin URI:         https://eacdoojigger.earthasylum.com/eacsimpleaws/
 Author:             [EarthAsylum Consulting](https://www.earthasylum.com)
-Stable tag:         1.0.1
-Last Updated:       09-Sep-2023
+Stable tag:         1.0.2
+Last Updated:       10-Apr-2024
 Requires at least:  5.5.0
-Tested up to:       6.4
+Tested up to:       6.5
 Requires PHP:       7.2
 Requires EAC:       2.0
 Contributors:       kevinburkholder
@@ -151,7 +151,7 @@ Once installed and activated options for this extension will show in the 'Genera
 
 == Copyright ==
 
-= Copyright © 2023, EarthAsylum Consulting, distributed under the terms of the GNU GPL. =
+= Copyright © 2023-2024, EarthAsylum Consulting, distributed under the terms of the GNU GPL. =
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
@@ -161,6 +161,11 @@ You should receive a copy of the GNU General Public License along with this prog
 
 
 == Changelog ==
+
+= Version 1.0.2 – April 10, 2024 =
+
++   Added notice if activated without {eac}Doojigger.
++   Updated AWS PHP SDK to version 3.304.1
 
 = Version 1.0.1 – September 9, 2023 =
 

@@ -13,9 +13,9 @@ namespace EarthAsylumConsulting;
  * @wordpress-plugin
  * Plugin Name:			{eac}SimpleAWS
  * Description:			{eac}SimpleAWS includes and enables use of the Amazon Web Services (AWS) PHP SDK
- * Version:				1.0.1
+ * Version:				1.0.2
  * Requires at least:	5.5.0
- * Tested up to:		6.4
+ * Tested up to:		6.5
  * Requires PHP:		7.2
  * Plugin URI:			https://eacdoojigger.earthasylum.com/eacsimpleaws/
  * Author:				EarthAsylum Consulting
@@ -23,6 +23,17 @@ namespace EarthAsylumConsulting;
  * License:				GPLv3 or later
  * License URI:			https://www.gnu.org/licenses/gpl.html
  */
+
+if (!defined('EAC_DOOJIGGER_VERSION'))
+{
+	\add_action( 'all_admin_notices', function()
+		{
+			echo '<div class="notice notice-error is-dismissible"><p>{eac}SimpleAWS requires installation & activation of '.
+				 '<a href="https://eacdoojigger.earthasylum.com/eacdoojigger" target="_blank">{eac}Doojigger</a>.</p></div>';
+		}
+	);
+	return;
+}
 
 class eacSimpleAWS
 {
