@@ -7,15 +7,14 @@ namespace EarthAsylumConsulting;
  * @category	WordPress Plugin
  * @package		{eac}SimpleAWS\{eac}Doojigger Extensions
  * @author		Kevin Burkholder <KBurkholder@EarthAsylum.com>
- * @copyright	Copyright (c) 2023 EarthAsylum Consulting <www.earthasylum.com>
- * @version		1.x
+ * @copyright	Copyright (c) 2025 EarthAsylum Consulting <www.earthasylum.com>
  *
  * @wordpress-plugin
  * Plugin Name:			{eac}SimpleAWS
  * Description:			{eac}SimpleAWS includes and enables use of the Amazon Web Services (AWS) PHP SDK
- * Version:				1.0.2
+ * Version:				1.0.3
  * Requires at least:	5.8
- * Tested up to:		6.6
+ * Tested up to:		6.8
  * Requires PHP:		7.4
  * Plugin URI:			https://eacdoojigger.earthasylum.com/eacsimpleaws/
  * Author:				EarthAsylum Consulting
@@ -24,7 +23,7 @@ namespace EarthAsylumConsulting;
  * License URI:			https://www.gnu.org/licenses/gpl.html
  */
 
-if (!defined('EAC_DOOJIGGER_VERSION'))
+if (!defined('EACDOOJIGGER_VERSION'))
 {
 	\add_action( 'all_admin_notices', function()
 		{
@@ -76,7 +75,7 @@ class eacSimpleAWS
 				/*
     			 * Add our extension to load
     			 */
-				$extensionDirectories[ plugin_basename( __FILE__ ) ] = [plugin_dir_path( __FILE__ ).'/Extensions'];
+				$extensionDirectories[ plugin_basename( __FILE__ ) ] = [plugin_dir_path( __FILE__ )];
 				return $extensionDirectories;
 			}
 		);

@@ -9,8 +9,7 @@ if (! class_exists(__NAMESPACE__.'\Simple_AWS_extension', false) )
 	 * @category	WordPress Plugin
 	 * @package		{eac}Doojigger\Extensions
 	 * @author		Kevin Burkholder <KBurkholder@EarthAsylum.com>
-	 * @copyright	Copyright (c) 2023 EarthAsylum Consulting <www.EarthAsylum.com>
-	 * @version		1.x
+	 * @copyright	Copyright (c) 2025 EarthAsylum Consulting <www.EarthAsylum.com>
 	 * @link		https://eacDoojigger.earthasylum.com/
 	 * @see			https://eacDoojigger.earthasylum.com/phpdoc/
 	 */
@@ -20,7 +19,7 @@ if (! class_exists(__NAMESPACE__.'\Simple_AWS_extension', false) )
 		/**
 		 * @var string extension version
 		 */
-		const VERSION			= '23.0518.1';
+		const VERSION			= '25.0419.1';
 
 		/**
 		 * @var string default verion
@@ -48,14 +47,11 @@ if (! class_exists(__NAMESPACE__.'\Simple_AWS_extension', false) )
 		{
 			parent::__construct($plugin, self::ALLOW_ALL|self::DEFAULT_DISABLED);
 
-			if ($this->is_admin())
-			{
-				$this->registerExtension( $this->className );
-				// Register plugin options when needed
-				$this->add_action( "options_settings_page", array($this, 'admin_options_settings') );
-				// Add contextual help
-				$this->add_action( 'options_settings_help', array($this, 'admin_options_help') );
-			}
+			$this->registerExtension( $this->className );
+			// Register plugin options when needed
+			$this->add_action( "options_settings_page", array($this, 'admin_options_settings') );
+			// Add contextual help
+			$this->add_action( 'options_settings_help', array($this, 'admin_options_help') );
 		}
 
 
