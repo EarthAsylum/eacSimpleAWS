@@ -5,8 +5,8 @@
  * @category	WordPress Plugin
  * @package		{eac}Doojigger\Extensions
  * @author		Kevin Burkholder <KBurkholder@EarthAsylum.com>
- * @copyright	Copyright (c) 2023 EarthAsylum Consulting <www.EarthAsylum.com>
- * @version 	23.0909.1
+ * @copyright	Copyright (c) 2025 EarthAsylum Consulting <www.EarthAsylum.com>
+ * @version 	25.0429.1
  *
  * included for admin_options_help() method
  */
@@ -56,7 +56,28 @@ Once enabled, AWS services are easily accessable from other plugins, extensions 
 <?php
 $content = ob_get_clean();
 
-$this->addPluginHelpTab('Simple AWS',$content,['Amazon Web Services','open']);
+$this->addPluginHelpTab(['Simple AWS',self::TAB_NAME],$content,['Amazon Web Services','open']);
+
+ob_start();
+?>
+<P>The <em>Simple AWS S3 Events</em> extension is intended to facilitate events through AWS EventBridge,
+passing data from and to WordPress/WooCommerce.
+<ul>
+	<li>A "webhook delivery URL" is created to be used by WooCommerce to send data (order, product, or coupon) as a file to an AWS S3 bucket.
+	<li>An "EventBridge Target URL" is created to accepts data from AWS EventBridge derived from the file saved to the S3 bucket.
+</ul>
+
+<p>These 2 features may be used by the same WordPress installation (though I'm not sure why) or by different,
+even several, installations to route WooCommerce data to other destinations.</p>
+
+<p>One or many WooCommerce sites can use the "WebHook Delivery URL" of another site to
+send orders through that site and then on to an S3 bucket as individual files.</p>
+
+<p>EventBridge can be configured to deliver S3 files to one (or many) WordPress sites using the "EventBridge Target URL".</p>
+<?php
+$content = ob_get_clean();
+
+$this->addPluginHelpTab(['Simple AWS',self::TAB_NAME],$content,['Simple AWS S3 Events']);
 
 $this->addPluginSidebarLink(
 	"<span class='dashicons dashicons-amazon'></span>{eac}SimpleAWS",

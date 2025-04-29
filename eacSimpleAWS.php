@@ -12,7 +12,7 @@ namespace EarthAsylumConsulting;
  * @wordpress-plugin
  * Plugin Name:			{eac}SimpleAWS
  * Description:			{eac}SimpleAWS includes and enables use of the Amazon Web Services (AWS) PHP SDK
- * Version:				1.0.3
+ * Version:				1.1.0
  * Requires at least:	5.8
  * Tested up to:		6.8
  * Requires PHP:		7.4

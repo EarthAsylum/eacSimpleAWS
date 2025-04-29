@@ -19,7 +19,18 @@ if (! class_exists(__NAMESPACE__.'\Simple_AWS_extension', false) )
 		/**
 		 * @var string extension version
 		 */
-		const VERSION			= '25.0419.1';
+		const VERSION			= '25.0428.1';
+
+		/**
+		 * @var string extension tab name
+		 */
+		const TAB_NAME 			= 'AWS';
+
+		/**
+		 * @var string|array|bool to set (or disable) default group display/switch
+		 */
+		const ENABLE_OPTION		= "<abbr title='Enables the AWS SDK for PHP and provides methods and filters for using AWS.'".
+											   ">Simple AWS</abbr>";
 
 		/**
 		 * @var string default verion
@@ -47,11 +58,14 @@ if (! class_exists(__NAMESPACE__.'\Simple_AWS_extension', false) )
 		{
 			parent::__construct($plugin, self::ALLOW_ALL|self::DEFAULT_DISABLED);
 
-			$this->registerExtension( $this->className );
-			// Register plugin options when needed
-			$this->add_action( "options_settings_page", array($this, 'admin_options_settings') );
-			// Add contextual help
-			$this->add_action( 'options_settings_help', array($this, 'admin_options_help') );
+			add_action('admin_init', function()
+			{
+				$this->registerExtension( $this->className );
+				// Register plugin options when needed
+				$this->add_action( "options_settings_page", array($this, 'admin_options_settings') );
+				// Add contextual help
+				$this->add_action( 'options_settings_help', array($this, 'admin_options_help') );
+			});
 		}
 
 
@@ -97,7 +111,7 @@ if (! class_exists(__NAMESPACE__.'\Simple_AWS_extension', false) )
 		 */
 		public function admin_options_help()
 		{
-			if (!$this->plugin->isSettingsPage('General')) return;
+			if (!$this->plugin->isSettingsPage(self::TAB_NAME)) return;
 
 			include 'includes/simple_aws.help.php';
 		}
