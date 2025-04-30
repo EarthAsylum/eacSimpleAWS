@@ -164,7 +164,7 @@ add_action( "eacDoojigger_eventbridge_order",   'my_eventbridge_action', 10, 4 )
 add_action( "eacDoojigger_eventbridge_product", 'my_eventbridge_action', 10, 4 );
 add_action( "eacDoojigger_eventbridge_coupon",  'my_eventbridge_action', 10, 4 );
 
-function my_eventbride_action($file, $payload, $type, $fileName) {
+function my_EventBridge_action($file, $payload, $type, $fileName) {
     $data = $file->get('Body');
 }
 ```
@@ -193,9 +193,9 @@ When changing the bucket name and/or file name, the *Event pattern* shown below 
 
 __EventBridge Setup__
 
-There are several steps and configurations needed to get EventBride working properly. Below are the key components needed for proper configuration, other options may be set to your preferences/needs.
+There are several steps and configurations needed to get EventBridge working properly. Below are the key components needed for proper configuration, other options may be set to your preferences/needs.
 
-In AWS EventBride:
+In AWS EventBridge:
 
 1.  EventBridge -> Connections -> Create Connection
 
@@ -303,7 +303,7 @@ You should receive a copy of the GNU General Public License along with this prog
 = Version 1.1.0 – Apr 29, 2025 =
 
 +   New `Simple AWS S3 Events` extension.
-    +   Webhook for WooCommerce; REST endpoint for AWS EventBride.
+    +   Webhook for WooCommerce; REST endpoint for AWS EventBridge.
 +   Moved from `General` to `AWS` tab.
 
 = Version 1.0.3 – Apr 19, 2025 =
