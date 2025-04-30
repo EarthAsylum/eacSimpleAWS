@@ -77,7 +77,7 @@ send orders through that site and then on to an S3 bucket as individual files.</
 <?php
 $content = ob_get_clean();
 
-$this->addPluginHelpTab(['Simple AWS',self::TAB_NAME],$content,['Simple AWS S3 Events']);
+$this->addPluginHelpTab(['Simple AWS',self::TAB_NAME],$content,'Simple AWS S3 Events');
 
 $this->addPluginSidebarLink(
 	"<span class='dashicons dashicons-amazon'></span>{eac}SimpleAWS",
