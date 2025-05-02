@@ -2,11 +2,11 @@
 Plugin URI:         https://eacdoojigger.earthasylum.com/eacsimpleaws/
 Author:             [EarthAsylum Consulting](https://www.earthasylum.com)
 Stable tag:         1.1.0
-Last Updated:       29-Apr-2025
+Last Updated:       01-May-2025
 Requires at least:  5.8
 Tested up to:       6.8
 Requires PHP:       7.4
-Requires EAC:       3.0
+Requires EAC:       3.1
 Contributors:       kevinburkholder
 License:            GPLv3 or later
 License URI:        https://www.gnu.org/licenses/gpl.html
@@ -244,6 +244,17 @@ alternatively
 
 You can add other targets, such as CloudWatch for logging, other WordPress sites using this extension, or other services that can ingest this data. This extension provides logging (debug level) to expose detailed data structures.
 
+See also: [How do I create and troubleshoot an Amazon EventBridge rule that triggers on S3 objects or operations?](https://repost.aws/knowledge-center/eventbridge-rule-monitors-s3) on AWS re:Post.
+
+= Using AWS [CloudFront](https://aws.amazon.com/cloudfront/) or [Simple Email Service](https://aws.amazon.com/ses/) =
+
++   [{eac}SimpleCDN](https://eacDoojigger.earthasylum.com/eacsimplecdn/)
+An {eac}Doojigger extension to enable the use of Content Delivery Network assets on your WordPress site, significantly decreasing your page load times and improving the user experience.
+
++   [{eac}SimpleSMTP](https://eacDoojigger.earthasylum.com/eacsimplesmtp/)
+An {eac}Doojigger extension to configure WordPress wp_mail and phpmailer to use your SMTP (outgoing) mail server when sending email.
+
+
 == Installation ==
 
 **{eac}SimpleAWS** is an extension plugin to and requires installation and registration of [{eac}Doojigger](https://eacDoojigger.earthasylum.com/).
@@ -284,7 +295,15 @@ Once installed and activated options for this extension will show in the 'AWS' t
 
 = Additional Information =
 
-+   {eac}SimpleAWS is an extension plugin to and requires installation and registration of [{eac}Doojigger](https://eacDoojigger.earthasylum.com/).
+{eac}SimpleAWS is an extension plugin to and requires installation and registration of [{eac}Doojigger](https://eacDoojigger.earthasylum.com/).
+
+See Also:
+
++   [{eac}SimpleCDN](https://eacDoojigger.earthasylum.com/eacsimplecdn/)
+An {eac}Doojigger extension to enable the use of Content Delivery Network assets on your WordPress site, significantly decreasing your page load times and improving the user experience.
+
++   [{eac}SimpleSMTP](https://eacDoojigger.earthasylum.com/eacsimplesmtp/)
+An {eac}Doojigger extension to configure WordPress wp_mail and phpmailer to use your SMTP (outgoing) mail server when sending email.
 
 
 == Copyright ==
