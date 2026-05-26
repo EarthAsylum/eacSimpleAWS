@@ -7,14 +7,14 @@ namespace EarthAsylumConsulting;
  * @category	WordPress Plugin
  * @package		{eac}SimpleAWS\{eac}Doojigger Extensions
  * @author		Kevin Burkholder <KBurkholder@EarthAsylum.com>
- * @copyright	Copyright (c) 2025 EarthAsylum Consulting <www.earthasylum.com>
+ * @copyright	Copyright (c) 2026 EarthAsylum Consulting <www.earthasylum.com>
  *
  * @wordpress-plugin
  * Plugin Name:			{eac}SimpleAWS
  * Description:			{eac}SimpleAWS includes and enables use of the Amazon Web Services (AWS) PHP SDK
- * Version:				1.1.1
+ * Version:				1.1.2
  * Requires at least:	5.8
- * Tested up to:		6.8
+ * Tested up to:		7.0
  * Requires PHP:		7.4
  * Plugin URI:			https://eacdoojigger.earthasylum.com/eacsimpleaws/
  * Author:				EarthAsylum Consulting

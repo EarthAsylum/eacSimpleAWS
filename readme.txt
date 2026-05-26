@@ -1,10 +1,10 @@
 === {eac}Doojigger Simple AWS Extension for WordPress ===
 Plugin URI:         https://eacdoojigger.earthasylum.com/eacsimpleaws/
 Author:             [EarthAsylum Consulting](https://www.earthasylum.com)
-Stable tag:         1.1.1
-Last Updated:       30-Jul-2025
+Stable tag:         1.1.2
+Last Updated:       23-May-2026
 Requires at least:  5.8
-Tested up to:       6.8
+Tested up to:       7.0
 Requires PHP:       7.4
 Requires EAC:       3.1
 Contributors:       kevinburkholder
@@ -121,7 +121,7 @@ if ($aws = $this->plugin->getExtension('Simple_AWS')) {
                 'Metadata' 	=> $metadata,
                 'Body' 		=> json_encode($payload,JSON_PRETTY_PRINT),
 			]);
-        } 
+        }
         catch (\AwsException $exception) {
             $this->logError($exception,"AWS S3Client Error");
         }
@@ -309,7 +309,7 @@ An {eac}Doojigger extension to configure WordPress wp_mail and phpmailer to use 
 
 == Copyright ==
 
-= Copyright © 2023-2025, EarthAsylum Consulting, distributed under the terms of the GNU GPL. =
+= Copyright © 2026, EarthAsylum Consulting, distributed under the terms of the GNU GPL. =
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
@@ -319,6 +319,11 @@ You should receive a copy of the GNU General Public License along with this prog
 
 
 == Changelog ==
+
+= Version 1.1.2 – May 23, 2026 =
+
++   Compatible with WordPress 7.0.
++   Updated AWS PHP SDK to version 3.382.0
 
 = Version 1.1.1 – Jul 30, 2025 =
 

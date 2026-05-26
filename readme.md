@@ -1,16 +1,17 @@
-## {eac}Doojigger Simple AWS Extension for WordPress  
+## {eac}Doojigger Simple AWS Extension for WordPress
 [![EarthAsylum Consulting](https://img.shields.io/badge/EarthAsylum-Consulting-0?&labelColor=6e9882&color=707070)](https://earthasylum.com/)
 [![WordPress](https://img.shields.io/badge/WordPress-Plugins-grey?logo=wordpress&labelColor=blue)](https://wordpress.org/plugins/search/EarthAsylum/)
 [![eacDoojigger](https://img.shields.io/badge/Requires-%7Beac%7DDoojigger-da821d)](https://eacDoojigger.earthasylum.com/)
+[![Sponsorship](https://img.shields.io/static/v1?label=Sponsorship&message=%E2%9D%A4&logo=GitHub&color=bf3889)](https://github.com/sponsors/EarthAsylum)
 
 <details><summary>Plugin Header</summary>
 
 Plugin URI:         https://eacdoojigger.earthasylum.com/eacsimpleaws/  
 Author:             [EarthAsylum Consulting](https://www.earthasylum.com)  
-Stable tag:         1.1.1  
-Last Updated:       30-Jul-2025  
+Stable tag:         1.1.2  
+Last Updated:       23-May-2026  
 Requires at least:  5.8  
-Tested up to:       6.8  
+Tested up to:       7.0  
 Requires PHP:       7.4  
 Requires EAC:       3.1  
 Contributors:       [kevinburkholder](https://profiles.wordpress.org/kevinburkholder)  
@@ -129,7 +130,7 @@ if ($aws = $this->plugin->getExtension('Simple_AWS')) {
                 'Metadata' 	=> $metadata,
                 'Body' 		=> json_encode($payload,JSON_PRETTY_PRINT),
 			]);
-        } 
+        }
         catch (\AwsException $exception) {
             $this->logError($exception,"AWS S3Client Error");
         }
@@ -313,5 +314,16 @@ An {eac}Doojigger extension to enable the use of Content Delivery Network assets
 
 +   [{eac}SimpleSMTP](https://eacDoojigger.earthasylum.com/eacsimplesmtp/)
 An {eac}Doojigger extension to configure WordPress wp_mail and phpmailer to use your SMTP (outgoing) mail server when sending email.
+
+
+### Copyright
+
+#### Copyright © 2026, EarthAsylum Consulting, distributed under the terms of the GNU GPL.
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.  
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should receive a copy of the GNU General Public License along with this program. If not, see [https://www.gnu.org/licenses/](https://www.gnu.org/licenses/).
 
 
