@@ -14,7 +14,7 @@ namespace EarthAsylumConsulting;
  * Description:			{eac}SimpleAWS includes and enables use of the Amazon Web Services (AWS) PHP SDK
  * Version:				1.1.2
  * Requires at least:	5.8
- * Tested up to:		7.0
+ * Tested up to:		7.1
  * Requires PHP:		7.4
  * Plugin URI:			https://eacdoojigger.earthasylum.com/eacsimpleaws/
  * Author:				EarthAsylum Consulting
