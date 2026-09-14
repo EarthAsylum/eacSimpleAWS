@@ -8,8 +8,8 @@
 
 Plugin URI:         https://eacdoojigger.earthasylum.com/eacsimpleaws/  
 Author:             [EarthAsylum Consulting](https://www.earthasylum.com)  
-Stable tag:         1.1.2  
-Last Updated:       23-May-2026  
+Stable tag:         1.1.3  
+Last Updated:       08-Sep-2026  
 Requires at least:  5.8  
 Tested up to:       7.1  
 Requires PHP:       7.4  

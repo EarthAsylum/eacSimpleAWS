@@ -8,11 +8,14 @@ namespace EarthAsylumConsulting;
  * @package		{eac}SimpleAWS\{eac}Doojigger Extensions
  * @author		Kevin Burkholder <KBurkholder@EarthAsylum.com>
  * @copyright	Copyright (c) 2026 EarthAsylum Consulting <www.earthasylum.com>
+ * @link		https://eacdoojigger.earthasylum.com/eacsimpleaws/
+ * @link 		https://wordpress.org/plugins/eacsimpleaws
+ * @link 		https://github.com/EarthAsylum/eacSimpleAWS
  *
  * @wordpress-plugin
  * Plugin Name:			{eac}SimpleAWS
  * Description:			{eac}SimpleAWS includes and enables use of the Amazon Web Services (AWS) PHP SDK
- * Version:				1.1.2
+ * Version:				1.1.3
  * Requires at least:	5.8
  * Tested up to:		7.1
  * Requires PHP:		7.4
@@ -25,10 +28,12 @@ namespace EarthAsylumConsulting;
 
 if (!defined('EACDOOJIGGER_VERSION'))
 {
-	\add_action( 'all_admin_notices', function()
+	\add_action( 'admin_notices', function()
 		{
-			echo '<div class="notice notice-error is-dismissible"><p>{eac}SimpleAWS requires installation & activation of '.
-				 '<a href="https://eacdoojigger.earthasylum.com/eacdoojigger" target="_blank">{eac}Doojigger</a>.</p></div>';
+			echo '<div class="notice notice-error is-dismissible">'.
+				 '<em>{eac}SimpleAWS</em> requires installation & activation of '.
+				 '<a href="https://eacdoojigger.earthasylum.com/eacdoojigger" target="_blank">'.
+				 '{eac}Doojigger</a>.</div>';
 		}
 	);
 	return;
@@ -51,26 +56,29 @@ class eacSimpleAWS
 		 */
 		add_filter( 'eacDoojigger_load_extensions', function($extensionDirectories)
 			{
-				/*
-    			 * Enable update notice (self hosted or wp hosted)
-    			 */
-				eacDoojigger::loadPluginUpdater(__FILE__,'wp');
+				if (is_admin())
+				{
+					/*
+					 * Enable update notice (self hosted or wp hosted)
+					 */
+					eacDoojigger::loadPluginUpdater(__FILE__,'wp');
 
-				/*
-    			 * Add links on plugins page
-    			 */
-				add_filter( (is_network_admin() ? 'network_admin_' : '').'plugin_action_links_' . plugin_basename( __FILE__ ),
-					function($pluginLinks, $pluginFile, $pluginData) {
-						return array_merge(
-							[
-								'settings'		=> eacDoojigger::getSettingsLink($pluginData),
-								'documentation'	=> eacDoojigger::getDocumentationLink($pluginData),
-								'support'		=> eacDoojigger::getSupportLink($pluginData),
-							],
-							$pluginLinks
-						);
-					},20,3
-				);
+					/*
+					 * Add links on plugins page
+					 */
+					add_filter( (is_network_admin() ? 'network_admin_' : '').'plugin_action_links_' . plugin_basename( __FILE__ ),
+						function($pluginLinks, $pluginFile, $pluginData) {
+							return array_merge(
+								[
+									'settings'		=> eacDoojigger::getSettingsLink($pluginData),
+									'documentation'	=> eacDoojigger::getDocumentationLink($pluginData),
+									'support'		=> eacDoojigger::getSupportLink($pluginData),
+								],
+								$pluginLinks
+							);
+						},20,3
+					);
+				}
 
 				/*
     			 * Add our extension to load
